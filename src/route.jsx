@@ -1,5 +1,5 @@
 import App from './App.jsx'
-import ErrorPage from "./error-page.jsx";
+import ErrorPage from "./page/error-page.jsx";
 import { createBrowserRouter } from "react-router-dom"
 
 const router = createBrowserRouter([
