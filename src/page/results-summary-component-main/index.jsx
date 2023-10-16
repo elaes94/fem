@@ -1,4 +1,5 @@
 import { useEffect } from "react"
+import './index.css'
 
 function Index() {
     useEffect(() => {
@@ -11,30 +12,50 @@ function Index() {
 
     return (
         <>
-            Your Result
-            76
-            of 100
+            <article>
+                <section className="result">
+                    <div className="title">
+                        Your Result
+                    </div>
+                    <div className="score">
+                        76
+                        of 100
+                    </div>
 
-            Great
-            You scored higher than 65% of the people who have taken these tests.
+                    <div className="message">
+                        Great
+                    </div>
+                    <p>
+                        You scored higher than 65% of the people who have taken these tests.
+                    </p>
+                </section>
+                <section className="summary">
+                    <div className="summary">
+                        Summary
+                    </div>
+                    <div>
+                        Reaction
+                        80 / 100
+                    </div>
+                    <div>
+                        Memory
+                        92 / 100
+                    </div>
+                    <div>
+                        Verbal
+                        61 / 100
+                    </div>
+                    <div>
+                        Visual
+                        72 / 100
+                    </div>
+                    <button>
+                        Continue
+                    </button>
+                </section>
+            </article>
 
-            Summary
-
-            Reaction
-            80 / 100
-
-            Memory
-            92 / 100
-
-            Verbal
-            61 / 100
-
-            Visual
-            72 / 100
-
-            Continue
-
-            <div class="attribution">
+            <div className="attribution">
                 Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
                 Coded by <a href="#">Your Name Here</a>.
             </div>
