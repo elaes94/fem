@@ -21,7 +21,7 @@ function Index() {
                         <div className="percent">
                             76
                         </div>
-                        <div className="lavender">
+                        <div>
                         of 100
                         </div>
                     </div>
