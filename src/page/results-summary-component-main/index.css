@@ -1,3 +1,33 @@
+body {
+    font-family: sans-serif;
+}
+
 section {
     border: solid 1px black;
+}
+
+section.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(hsl(252, 100%, 67%),
+            hsl(241, 81%, 54%));
+    border-radius: 0 0 20px 20px;
+    color: hsl(0, 0%, 100%);
+}
+
+.lavender {
+    color: hsl(241, 100%, 89%);
+}
+
+.score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(hsla(256, 72%, 46%, 1),
+            hsla(241, 72%, 46%, 0));
+    width: 6rem;
+    height: 6rem;
+    border-radius: 3rem;
 }

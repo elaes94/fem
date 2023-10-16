@@ -14,18 +14,22 @@ function Index() {
         <>
             <article>
                 <section className="result">
-                    <div className="title">
+                    <div className="title lavender">
                         Your Result
                     </div>
                     <div className="score">
-                        76
+                        <div className="percent">
+                            76
+                        </div>
+                        <div className="lavender">
                         of 100
+                        </div>
                     </div>
 
                     <div className="message">
                         Great
                     </div>
-                    <p>
+                    <p className="lavender">
                         You scored higher than 65% of the people who have taken these tests.
                     </p>
                 </section>
