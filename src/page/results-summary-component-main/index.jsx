@@ -1,13 +1,19 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import './index.css'
+import Item from './Item'
 
 function Index() {
+    const [list, setList] = useState([])
     useEffect(() => {
         document.title = 'frontend Mentor | Results summary component'
         const favicon = document.getElementById('favicon')
         favicon.href = './src/page/results-summary-component-main/assets/images/favicon-32x32.png'
         favicon.type = 'image/png'
         favicon.sizes = '32x32'
+
+        fetch('./src/page/results-summary-component-main/data.json')
+        .then(res => res.json())
+        .then(data => console.log(data))
     }, [])
 
     return (
@@ -34,13 +40,10 @@ function Index() {
                     </p>
                 </section>
                 <section className="summary">
-                    <div className="summary">
+                    <div className="title">
                         Summary
                     </div>
-                    <div>
-                        Reaction
-                        80 / 100
-                    </div>
+                    <Item img={'icon-reaction.svg'} color={'hsl(0, 100%, 67%)'} backgroundColor={'hsla(0, 100%, 67%, 0.15)'}/>
                     <div>
                         Memory
                         92 / 100
