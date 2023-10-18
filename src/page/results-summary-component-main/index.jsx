@@ -7,11 +7,11 @@ function Index() {
     useEffect(() => {
         document.title = 'frontend Mentor | Results summary component'
         const favicon = document.getElementById('favicon')
-        favicon.href = './src/page/results-summary-component-main/assets/images/favicon-32x32.png'
+        favicon.href = '/results-summary-component-main/assets/images/favicon-32x32.png'
         favicon.type = 'image/png'
         favicon.sizes = '32x32'
 
-        fetch('./src/page/results-summary-component-main/data.json')
+        fetch('/results-summary-component-main/data.json')
         .then(res => res.json())
         .then(data => console.log(data))
     }, [])
