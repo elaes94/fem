@@ -71,8 +71,11 @@ section.summary .title{
     font-size: 1.1rem;
 }
 
-button {
-    width: 100%;
+section.summary a {
+    display: block;
+    margin: auto;
+    /* width: 0; */
+    text-align: center;
     color: hsl(0, 0%, 100%);
     background-color: hsl(224, 30%, 27%);
     padding: 1rem;
@@ -82,11 +85,11 @@ button {
     font-weight: 700;
 }
 
-button:hover {
+section.summary a:hover {
     cursor: pointer;
 }
 
-button:active {
+section.summary a:active {
     background: linear-gradient(hsl(252, 100%, 67%),
             hsl(241, 81%, 54%));
 }

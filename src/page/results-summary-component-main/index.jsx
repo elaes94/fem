@@ -59,9 +59,9 @@ function Index() {
                        <b>Summary</b>
                     </div>
                     {listItems}
-                    <button>
+                    <a>
                         Continue
-                    </button>
+                    </a>
                 </section>
             </article>
 
