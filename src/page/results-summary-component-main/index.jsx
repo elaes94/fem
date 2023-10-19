@@ -12,9 +12,24 @@ function Index() {
         favicon.sizes = '32x32'
 
         fetch('/results-summary-component-main/data.json')
-        .then(res => res.json())
-        .then(data => console.log(data))
+            .then(res => res.json())
+            .then(data => setList(data))
     }, [])
+
+    const color = [
+        'hsl(0, 100%, 67%)',
+        'hsl(39, 100%, 56%)',
+        'hsl(166, 100%, 37%)',
+        'hsl(234, 85%, 45%)'
+    ]
+
+    const listItems = list.map((item, index) =>
+        <Item
+            key={index}
+            item={item}
+            color={color[index]}
+        />
+    )
 
     return (
         <>
@@ -28,7 +43,7 @@ function Index() {
                             76
                         </div>
                         <div>
-                        of 100
+                            of 100
                         </div>
                     </div>
 
@@ -41,21 +56,9 @@ function Index() {
                 </section>
                 <section className="summary">
                     <div className="title">
-                        Summary
+                       <b>Summary</b>
                     </div>
-                    <Item img={'icon-reaction.svg'} color={'hsl(0, 100%, 67%)'} backgroundColor={'hsla(0, 100%, 67%, 0.15)'}/>
-                    <div>
-                        Memory
-                        92 / 100
-                    </div>
-                    <div>
-                        Verbal
-                        61 / 100
-                    </div>
-                    <div>
-                        Visual
-                        72 / 100
-                    </div>
+                    {listItems}
                     <button>
                         Continue
                     </button>

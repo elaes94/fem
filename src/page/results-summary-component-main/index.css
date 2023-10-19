@@ -6,8 +6,7 @@ body {
 }
 
 section {
-    border: solid 1px black;
-    padding: 1.5rem 0;
+    padding: 1.5rem;
 }
 
 section.result {
@@ -61,4 +60,13 @@ section.result p {
     max-width: 70vw;
     text-align: center;
     color: hsl(241, 100%, 89%);
+}
+
+section.summary {
+    color: hsl(224, 30%, 27%);
+}
+
+section.summary .title{
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
 }
