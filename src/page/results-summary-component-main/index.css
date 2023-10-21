@@ -156,14 +156,6 @@ section.summary a:active {
         max-width: 32vw;
     }
 
-    section.summary {
-        /* position: relative;
-        right: 5rem;
-        padding-left: 5rem;    
-        width: 23rem;   */
-        
-    }
-
     section.summary .title {
         margin-bottom: 1.9rem;
         font-size: 1.5rem;
