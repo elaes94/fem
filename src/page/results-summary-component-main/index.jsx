@@ -33,37 +33,39 @@ function Index() {
 
     return (
         <>
-            <article>
-                <section className="result">
-                    <div className="title lavender">
-                        Your Result
-                    </div>
-                    <div className="score">
-                        <div className="percent">
-                            76
+            <main>
+                <article>
+                    <section className="result">
+                        <div className="title lavender">
+                            Your Result
                         </div>
-                        <div>
-                            of 100
+                        <div className="score">
+                            <div>
+                                76
+                            </div>
+                            <div>
+                                of 100
+                            </div>
                         </div>
-                    </div>
 
-                    <div className="message">
-                        Great
-                    </div>
-                    <p className="lavender">
-                        You scored higher than 65% of the people who have taken these tests.
-                    </p>
-                </section>
-                <section className="summary">
-                    <div className="title">
-                       <b>Summary</b>
-                    </div>
-                    {listItems}
-                    <a>
-                        Continue
-                    </a>
-                </section>
-            </article>
+                        <div className="message">
+                            Great
+                        </div>
+                        <p className="lavender">
+                            You scored higher than 65% of the people who have taken these tests.
+                        </p>
+                    </section>
+                    <section className="summary">
+                        <div className="title">
+                            <b>Summary</b>
+                        </div>
+                        {listItems}
+                        <a>
+                            Continue
+                        </a>
+                    </section>
+                </article>
+            </main>
 
             <div className="attribution">
                 Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.

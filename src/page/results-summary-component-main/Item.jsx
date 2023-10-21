@@ -8,8 +8,8 @@ function Item({ item, color }) {
         color.slice(3, -1) +
         ', 0.05)',
         borderRadius: '1rem',
-        padding: '1.1rem',
-        marginBottom: '0.95rem'
+        padding: '1rem',
+        marginBottom: '1.05rem'
     }
 
     const catStyle = {
@@ -20,7 +20,6 @@ function Item({ item, color }) {
     }
 
     const img = item.icon.split('/').at(-1)
-
 
     return (
         <div className="item" style={divStyle}>
