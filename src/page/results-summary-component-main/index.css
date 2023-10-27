@@ -1,171 +1,168 @@
 @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
 
-body {
+main.result {
     font-family: 'Hanken Grotesk', sans-serif;
     font-weight: 500;
-}
 
-section {
-    padding: 1.5rem;
-}
-
-section.result {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(hsl(252, 100%, 67%),
-            hsl(241, 81%, 54%));
-    border-radius: 0 0 30px 30px;
-    color: hsl(0, 0%, 100%);
-}
-
-section.result .title {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: hsl(241, 100%, 89%);
-}
-
-.score {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    background: linear-gradient(hsla(256, 72%, 46%, 1),
-            hsla(241, 72%, 46%, 0));
-    width: 9rem;
-    height: 9rem;
-    border-radius: 4.5rem;
-    font-weight: 700;
-}
-
-.score div:first-child  {
-    font-size: 3.5rem;
-    font-weight: 800;
-}
-
-.score div:last-child {
-    color: #8379fe;
-}
-
-section.result .message {
-    font-size: 1.5rem;
-    font-weight: 700;
-    margin-bottom: .5rem;
-}
-
-section.result p {
-    margin-bottom: 1rem;
-    max-width: 70vw;
-    text-align: center;
-    color: hsl(241, 100%, 89%);
-}
-
-section.summary {
-    color: hsl(224, 30%, 27%);
-}
-
-section.summary .title {
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-}
-
-section.summary a {
-    display: block;
-    margin: auto;
-    text-align: center;
-    color: hsl(0, 0%, 100%);
-    background-color: hsl(224, 30%, 27%);
-    padding: 1rem;
-    margin-top: 0.5rem;
-    border-radius: 2rem;
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-section.summary a:hover {
-    cursor: pointer;
-}
-
-section.summary a:active {
-    background: linear-gradient(hsl(252, 100%, 67%),
-            hsl(241, 81%, 54%));
-}
-
-@media screen and (min-width: 47rem) {
-    body {
-        font-size: 1.1rem;
+    & section {
+        padding: 1.5rem;
     }
 
-    main {
+    & section.result {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        height: 100vh;
+        background: linear-gradient(hsl(252, 100%, 67%),
+                hsl(241, 81%, 54%));
+        border-radius: 0 0 30px 30px;
+        color: hsl(0, 0%, 100%);
     }
 
-    article {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-content: center;
-        max-width: 46rem;
-        margin: auto;
-        box-shadow: 1rem 1rem 1rem hsl(221, 100%, 96%);
-        border-radius: 0 2rem 2rem 0;
+    & section.result .title {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: hsl(241, 100%, 89%);
     }
 
-    section {
-        height: 32rem;
-        padding: 2.4rem;
+    & .score {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1.5rem;
+        background: linear-gradient(hsla(256, 72%, 46%, 1),
+                hsla(241, 72%, 46%, 0));
+        width: 9rem;
+        height: 9rem;
+        border-radius: 4.5rem;
+        font-weight: 700;
     }
 
-    section.result {
-        border-radius: 2rem;
-    }
-
-    section.result .title {
-        margin-bottom: 2.2rem;
-        font-size: 1.5rem;
-    }
-    
-    .score {
-        width: 13rem;
-        height: 13rem;
-        border-radius: 6.5rem;
-        margin-bottom: 1.3rem;
-    }
-    
-    .score div:first-child  {        
-        font-size: 4.4rem;
+    & .score div:first-child {
+        font-size: 3.5rem;
         font-weight: 800;
     }
 
-    .score div:last-child {
-        position: relative;
-        bottom: 0.3rem;
+    & .score div:last-child {
+        color: #8379fe;
     }
 
-    section.result .message {
-        font-size: 2.2rem;
-        font-weight: 700;
-        margin-bottom: 0.7rem;
-    }
-
-    section.result p {
-        margin-bottom: 1rem;
-        max-width: 32vw;
-    }
-
-    section.summary .title {
-        margin-bottom: 1.9rem;
+    & section.result .message {
         font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: .5rem;
     }
 
-    section.summary a {
-        padding: 1rem;
-        margin-top: 2.6rem;
-        border-radius: 2rem;
+    & section.result p {
+        margin-bottom: 1rem;
+        max-width: 70vw;
+        text-align: center;
+        color: hsl(241, 100%, 89%);
+    }
+
+    & section.summary {
+        color: hsl(224, 30%, 27%);
+    }
+
+    & section.summary .title {
+        margin-bottom: 1.5rem;
         font-size: 1.1rem;
+    }
+
+    & section.summary a {
+        display: block;
+        margin: auto;
+        text-align: center;
+        color: hsl(0, 0%, 100%);
+        background-color: hsl(224, 30%, 27%);
+        padding: 1rem;
+        margin-top: 0.5rem;
+        border-radius: 2rem;
+        font-size: 1rem;
         font-weight: 700;
+    }
+
+    & section.summary a:hover {
+        cursor: pointer;
+    }
+
+    & section.summary a:active {
+        background: linear-gradient(hsl(252, 100%, 67%),
+                hsl(241, 81%, 54%));
+    }
+}
+
+@media screen and (min-width: 47rem) {
+    main.result {
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        font-size: 1.1rem;
+
+        & article {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-content: center;
+            max-width: 46rem;
+            margin: auto;
+            box-shadow: 1rem 1rem 1rem hsl(221, 100%, 96%);
+            border-radius: 0 2rem 2rem 0;
+        }
+
+        & section {
+            height: 32rem;
+            padding: 2.4rem;
+        }
+
+        & section.result {
+            border-radius: 2rem;
+        }
+
+        & section.result .title {
+            margin-bottom: 2.2rem;
+            font-size: 1.5rem;
+        }
+
+        & .score {
+            width: 13rem;
+            height: 13rem;
+            border-radius: 6.5rem;
+            margin-bottom: 1.3rem;
+        }
+
+        & .score div:first-child {
+            font-size: 4.4rem;
+            font-weight: 800;
+        }
+
+        & .score div:last-child {
+            position: relative;
+            bottom: 0.3rem;
+        }
+
+        & section.result .message {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.7rem;
+        }
+
+        & section.result p {
+            margin-bottom: 1rem;
+            max-width: 32vw;
+        }
+
+        & section.summary .title {
+            margin-bottom: 1.9rem;
+            font-size: 1.5rem;
+        }
+
+        & section.summary a {
+            padding: 1rem;
+            margin-top: 2.6rem;
+            border-radius: 2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
     }
 }

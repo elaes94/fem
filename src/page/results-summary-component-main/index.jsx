@@ -33,7 +33,7 @@ function Index() {
 
     return (
         <>
-            <main>
+            <main className="result">
                 <article>
                     <section className="result">
                         <div className="title lavender">
