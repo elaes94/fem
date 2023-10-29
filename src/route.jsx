@@ -2,6 +2,7 @@ import App from './App.jsx'
 import ErrorPage from "./page/error-page.jsx";
 import { createBrowserRouter } from "react-router-dom"
 import Result from './page/results-summary-component-main'
+import Rating from './page/interactive-rating-component-main'
 
 const router = createBrowserRouter([
     {
@@ -14,6 +15,9 @@ const router = createBrowserRouter([
     }, {
         path: "/result",
         element: <Result />
+    }, {
+        path: "/rating",
+        element: <Rating />
     },
 ])
 
