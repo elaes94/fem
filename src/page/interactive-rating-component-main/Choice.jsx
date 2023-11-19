@@ -1,5 +1,17 @@
-export function Choice({children}){
+import { useScore } from "./Index"
+
+export function Choice({ children }) {
+
+    const score = useScore()
+    let choiceClass = score.score == children ? "choice select" : "choice"
+
     return (
-        <div className="choice">{children}</div>
+        <div className={choiceClass}
+        onClick={() => {
+            score.setScore(children)
+        }}
+        >
+            {children}
+        </div>
     )
 }

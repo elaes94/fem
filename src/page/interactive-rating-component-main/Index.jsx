@@ -4,9 +4,11 @@ import Thank from "./Thank"
 import './index.css'
 
 const CurrentValidContext = createContext(null)
+const ScoreContext = createContext()
 
 export default function Index() {
-    const [validated, setValidated] = useState("null")
+    const [validated, setValidated] = useState(null)
+    const [score, setScore] = useState(2)
     useEffect(() => {
         document.title = 'Frontend Mentor | Interactive rating component'
         const favicon = document.getElementById('favicon')
@@ -16,26 +18,31 @@ export default function Index() {
     }, [])
 
     return (
-        <CurrentValidContext.Provider value={{validated, setValidated}}>
-            <main className="rating">
-                <Display />
-            </main>
+        <CurrentValidContext.Provider value={{ validated, setValidated }}>
+            <ScoreContext.Provider value={{score, setScore}}>
+                <main className="rating">
+                    <Display />
+                </main>
+            </ScoreContext.Provider>
         </CurrentValidContext.Provider>
     )
 }
 
-function Display(){
-    const {validated, setValidated} = useContext(CurrentValidContext)
-    if (validated === null || validated === "home")
-    {
+function Display() {
+    const { validated, setValidated } = useContext(CurrentValidContext)
+    if (validated === null || validated === "home") {
         return <Rating />
-    }    
+    }
 
     return (
         <Thank />
     )
 }
 
-export function useValidated(){
+export function useValidated() {
     return useContext(CurrentValidContext)
+}
+
+export function useScore() {
+    return useContext(ScoreContext)
 }

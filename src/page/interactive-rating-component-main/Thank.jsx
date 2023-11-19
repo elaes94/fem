@@ -1,11 +1,16 @@
+import { useScore } from "./Index"
+
 function Thank() {
+
+    const score = useScore()
+
     return (
         <section className="thank">
             {/* <!-- Thank you state start --> */}
             <img src="/interactive-rating-component-main/images/illustration-thank-you.svg" alt="" />
 
-            <div>
-                You selected  {/* <!-- Add rating here --> */} out of 5
+            <div className="score">
+                You selected  {score.score} out of 5
             </div>
 
 

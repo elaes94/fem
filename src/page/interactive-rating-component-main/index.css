@@ -55,6 +55,10 @@ main.rating {
         color: #7e8790;
     }
 
+    & .select {
+        background-color: #7e8790;
+    }
+
     & button {
         width: 100%;
         padding: .9rem;
@@ -75,5 +79,25 @@ main.rating {
         & h1 {
             margin-bottom: .7rem;
         }
+
+        & img {
+            margin-bottom: 1rem;
+        }
+
+        & .score {
+            display: inline-block;
+            padding: 0.4rem 0.6rem 0.3rem 0.6rem;
+            margin-bottom: 2rem;
+            border-radius: 1rem;
+            background-color: #262f38;
+            color: hsl(25, 97%, 53%);
+            font-size: .9rem;
+        }
+
+        & p {
+            margin-bottom: 1rem;
+        }
     }
+
+    
 }
