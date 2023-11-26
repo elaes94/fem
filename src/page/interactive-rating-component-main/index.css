@@ -53,10 +53,17 @@ main.rating {
         border-radius: 2.5rem;
         text-align: center;
         color: #7e8790;
+        cursor: pointer;
+    }
+
+    & .choice:hover {
+        background-color: hsl(25, 97%, 53%);
+        color: white;
     }
 
     & .select {
         background-color: #7e8790;
+        color: white;
     }
 
     & button {
@@ -71,6 +78,12 @@ main.rating {
         font-weight: 700;
         letter-spacing: 2px;
         margin-bottom: 1rem;
+        cursor: pointer;
+    }
+
+    & button:hover {
+        background-color: white;
+        color: hsl(25, 97%, 53%);
     }
 
     & section.thank {

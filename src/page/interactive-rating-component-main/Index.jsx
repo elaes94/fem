@@ -8,7 +8,7 @@ const ScoreContext = createContext()
 
 export default function Index() {
     const [validated, setValidated] = useState(null)
-    const [score, setScore] = useState(2)
+    const [score, setScore] = useState(0)
     useEffect(() => {
         document.title = 'Frontend Mentor | Interactive rating component'
         const favicon = document.getElementById('favicon')
