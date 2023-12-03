@@ -7,7 +7,7 @@ function Thank() {
     return (
         <section className="thank">
             {/* <!-- Thank you state start --> */}
-            <img src="/interactive-rating-component-main/images/illustration-thank-you.svg" alt="" />
+            <img className="draw" src="/interactive-rating-component-main/images/illustration-thank-you.svg" alt="" />
 
             <div className="score">
                 You selected  {score.score} out of 5
