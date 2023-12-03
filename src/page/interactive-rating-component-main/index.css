@@ -6,6 +6,7 @@ main.rating {
     height: 100vh;
     color: #7e8790;
     background-color: #141519;
+    /* font-size: 15px; */
     font-size: 15px;
     font-family: 'Overpass', sans-serif;
     font-weight: 400;
@@ -13,8 +14,8 @@ main.rating {
     & section {
         background-color: #1a212b;
         border-radius: 1rem;
-        padding: 1.4rem;
-        max-width: 87vw;
+        padding: min(6vw,2.5rem);
+        max-width: min(87vw,26rem);
         margin: auto;
     }
 
@@ -28,13 +29,15 @@ main.rating {
     }
 
     & h1 {
-        font-size: 1.5rem;
+        /* font-size: 1.5rem; */
+        font-size: 2em;
         color: white;
         margin-bottom: .9rem;
     }
 
     & p {
-        font-size: .88rem;
+        /* font-size: .88rem; */
+        font-size: 0.95em;
         line-height: 1.6;
         margin-bottom: 1.4rem;
     }
@@ -46,11 +49,12 @@ main.rating {
     }
 
     & .choice {
-        height: 2.5rem;
-        width: 2.5rem;
+        height: min(11vw, 3.2rem);
+        width: min(11vw, 3.2rem);
         background-color: #262f38;
-        padding: 0.8rem;
-        border-radius: 2.5rem;
+        /* padding: 1rem; */
+        padding: min(3vw, 1rem);
+        border-radius: min(11vw, 3.2rem);
         text-align: center;
         color: #7e8790;
         cursor: pointer;
