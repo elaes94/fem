@@ -4,15 +4,13 @@ import { createBrowserRouter } from "react-router-dom"
 import Result from './page/results-summary-component-main'
 import Rating from './page/interactive-rating-component-main/Index.jsx'
 import Newsletter from './page/newsletter-sign-up-with-success-message-main/Index.jsx'
+import Faq from './page/faq-accordion-main/Index.jsx'
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
         errorElement: <ErrorPage />,
-    }, {
-        path: "/toto",
-        element: <div>Toto</div>
     }, {
         path: "/result",
         element: <Result />
@@ -22,6 +20,9 @@ const router = createBrowserRouter([
     }, {
         path: "/newsletter",
         element: <Newsletter />
+    }, {
+        path: "/faq",
+        element: <Faq />
     },
 ])
 

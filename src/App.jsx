@@ -3,11 +3,20 @@ import MyCard from './page/components/MyCard'
 
 function App() {
 
+  const mystyle = {
+    display: 'flex',
+    justifyContent: 'center'
+  }
+
   return (
     <>
-    <h1>List</h1>
-    <MyCard route="/toto" />
-    <MyCard route="/result" />
+      <h1 style={mystyle}>Challenges</h1>
+      <section style={mystyle}>
+        <MyCard route="/result" />
+        <MyCard route="/rating" />
+        <MyCard route="/newsletter" />
+        <MyCard route="/faq" />
+      </section>
     </>
   )
 }
