@@ -1,20 +1,40 @@
+@font-face {
+    font-family: "WorkSans";
+    src:
+      url("/faq-accordion-main/assets/fonts/static/WorkSans-Regular.ttf") format("truetype"),
+      /* url("fonts/zantroke-webfont.woff") format("woff"); */
+    /* font-weight: normal;
+    font-style: normal; */
+  }
+
 main.faq{
     display: flex;
     min-height: 100vh;
-    background: no-repeat url('faq-accordion-main/assets/images/background-pattern-desktop.svg');
+    background: no-repeat url('/faq-accordion-main/assets/images/background-pattern-desktop.svg');
     background-color: #f9eeff;
     background-position-x: center;
     background-size: contain;
     font-size: 1rem;
+    font-family: 'WorkSans';
     
-    & section {
-        max-width: 80vw;
-        margin: auto;
-        background-color: chartreuse;
-    }
-
     & .background {
         max-width: 100vw;
         overflow: hidden;
     }
+
+    & section {
+        max-width: min(87vw, 37.5rem);
+        margin: auto;
+        padding: 0 min(6vw, 2.2rem);
+        border-radius: 1.2rem;
+        background-color: white;
+    }
+
+    & .title {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+        font-weight: 400;
+    }
+
 }
