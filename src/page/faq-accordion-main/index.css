@@ -4,12 +4,14 @@
     src:
         url("/faq-accordion-main/assets/fonts/static/WorkSans-Regular.ttf") format("truetype"),
 }
+
 @font-face {
     font-family: "WorkSans";
     font-weight: 600;
     src:
         url("/faq-accordion-main/assets/fonts/static/WorkSans-SemiBold.ttf") format("truetype"),
 }
+
 @font-face {
     font-family: "WorkSans";
     font-weight: 700;
@@ -24,7 +26,7 @@ main.faq {
     background-color: #f9eeff;
     background-position-x: center;
     background-size: contain;
-    font-size: 1rem;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
     font-family: 'WorkSans', sans-serif;
 
     & .background {
@@ -33,9 +35,9 @@ main.faq {
     }
 
     & section {
-        max-width: min(87vw, 37.5rem);
+        width: min(87vw, 37.5rem);
         margin: auto;
-        padding: 0 min(6vw, 2.45rem);
+        padding: 1rem min(6vw, 2.45rem);
         border-radius: 1.2rem;
         background-color: white;
     }
@@ -43,30 +45,41 @@ main.faq {
     & .title {
         display: flex;
         padding-left: 0.05rem;
+        margin: 1.5rem 0 0.4rem 0;
         align-items: center;
-        font-size: 2.32rem;
+        font-size: clamp(1.3rem, 3vw, 2.32rem);
 
-        & h1{
+        & img {
+            max-width: clamp(1.5rem, 3vw, 3rem);
+        }
+
+        & h1 {
             padding-left: 1.52rem;
         }
     }
 
-    & article{
+    & article {
 
         & h3 {
-            font-size: 1.125rem;
+            font-size: clamp(1rem, 2.7vw, 1.125rem);
+            margin-right: 2rem;
+            padding: 1.81rem 0 1.72rem 0;
             font-weight: 600;
-            max-width: min(50vw);
         }
 
         & div {
             display: flex;
             justify-content: space-between;
-            gap: 2rem;
         }
 
         & p {
             display: none;
+            line-height: 1.5;
+            padding-bottom: 1.55rem;
+        }
+
+        & p.show {
+            display: block;
         }
     }
 
