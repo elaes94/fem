@@ -47,12 +47,16 @@ main.faq {
         padding: min(1vw, 1rem) min(6vw, 2.45rem);
         border-radius: 1.2rem;
         background-color: white;
+
+        & :nth-child(n + 2 of article) {
+            border-top: solid 1px black;
+        }
     }
 
     & .title {
         display: flex;
         padding-left: 0.05rem;
-        margin: min(2.5vw, 1.5rem) 0 min(0.5vw, 0.4rem) 0;
+        margin: min(2.5vw, 1.6rem) 0 min(0.5vw, 0.43rem) 0;
         align-items: center;
         font-size: clamp(1.3rem, 3vw, 2.32rem);
 
@@ -70,7 +74,7 @@ main.faq {
         & h3 {
             font-size: clamp(1rem, 2.7vw, 1.125rem);
             margin-right: 2rem;
-            padding: min(6vw, 1.81rem) 0 min(6vw, 1.72rem) 0;
+            padding: min(6vw, 1.82rem) 0 min(6vw, 1.72rem) 0;
             font-weight: 600;
         }
 
@@ -82,16 +86,11 @@ main.faq {
         & p {
             display: none;
             line-height: 1.5;
-            padding-bottom: min(5vw, 1.55rem);
+            padding-bottom: min(5vw, 1.52rem);
         }
 
         & p.show {
             display: block;
         }
     }
-
-    & article:nth-child(n+3) {
-        border-top: solid 1px black;
-    }
-
 }

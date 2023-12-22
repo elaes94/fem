@@ -1,7 +1,10 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import './index.css'
+import Item from "./Item"
 
 export default function Index() {
+    const [list, setList] = useState([])
+    const [activeIndex, setActiveIndex] = useState(1)
 
     useEffect(() => {
         document.title = 'Frontend Mentor | FAQ accordion'
@@ -9,7 +12,24 @@ export default function Index() {
         favicon.href = '/faq-accordion-main/assets/images/favicon-32x32.png'
         favicon.type = 'image/png'
         favicon.sizes = '32x32'
+
+        fetch('/faq-accordion-main/data.json')
+            .then(res => res.json())
+            .then(data => setList(data))
     }, [])
+
+    function display() {
+        console.log("click" + list);
+    }
+
+    const listItems = list.map((item, index) =>
+        <Item
+            key={index}
+            item={item}
+            isActive={activeIndex === index}
+            display={() => setActiveIndex(index)}
+        />
+    )
 
     return (
         <main className="faq">
@@ -18,47 +38,7 @@ export default function Index() {
                     <img src="/faq-accordion-main/assets/images/icon-star.svg" alt="" />
                     <h1>FAQs</h1>
                 </div>
-                <article>
-                    <div>
-                        <h3> What is Frontend Mentor, and how will it help me?</h3>
-                        <img src="/faq-accordion-main/assets/images/icon-plus.svg" alt="" />
-                    </div>
-                    <p className="show">
-                        Frontend Mentor offers realistic coding challenges to help developers improve their
-                        frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for
-                        all levels and ideal for portfolio building.
-                    </p>
-                </article>
-                <article>
-                    <div>
-                        <h3>  Is Frontend Mentor free?</h3>
-                        <img src="/faq-accordion-main/assets/images/icon-plus.svg" alt="" />
-                    </div>
-                    <p>
-                        Yes, Frontend Mentor offers both free and premium coding challenges, with the free
-                        option providing access to a range of projects suitable for all skill levels.
-                    </p>
-                </article>
-                <article>
-                    <div>
-                        <h3> Can I use Frontend Mentor projects in my portfolio?</h3>
-                        <img src="/faq-accordion-main/assets/images/icon-plus.svg" alt="" />
-                    </div>
-                    <p>
-                        Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
-                        way to showcase your skills to potential employers!
-                    </p>
-                </article>
-                <article>
-                    <div>
-                        <h3> How can I get help if I'm stuck on a challenge?</h3>
-                        <img src="/faq-accordion-main/assets/images/icon-plus.svg" alt="" />
-                    </div>
-                    <p>
-                        The best place to get help is inside Frontend Mentor's Discord community. There's a help
-                        channel where you can ask questions and seek support from other community members.
-                    </p>
-                </article>
+                {listItems}
             </section>
 
         </main>
