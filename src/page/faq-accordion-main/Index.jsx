@@ -4,6 +4,7 @@ import Item from "./Item"
 
 export default function Index() {
     const [list, setList] = useState([])
+    const [activeIndex, setActiveIndex] = useState(0)
 
     useEffect(() => {
         document.title = 'Frontend Mentor | FAQ accordion'
@@ -23,6 +24,8 @@ export default function Index() {
         <Item
             key={index}
             item={item}
+            isActive={activeIndex === index}
+            display={() => setActiveIndex(index)}
         />
     )
 
