@@ -28,6 +28,7 @@ main.faq {
     background-size: contain;
     font-size: clamp(0.9rem, 2.5vw, 1rem);
     font-family: 'WorkSans', sans-serif;
+    color: hsl(292, 42%, 14%);
 
     @media (max-width: 650px) {
         background: no-repeat url('/faq-accordion-main/assets/images/background-pattern-mobile.svg');
@@ -47,9 +48,10 @@ main.faq {
         padding: min(1vw, 1rem) min(6vw, 2.45rem);
         border-radius: 1.2rem;
         background-color: white;
+        box-shadow: 0 3rem 2rem hsl(292, 42%, 14%, 10%);
 
         & :nth-child(n + 2 of article) {
-            border-top: solid 1px black;
+            border-top: solid 1px hsl(275, 100%, 97%);
         }
     }
 
@@ -76,6 +78,11 @@ main.faq {
             margin-right: 2rem;
             padding: min(6vw, 1.82rem) 0 min(6vw, 1.72rem) 0;
             font-weight: 600;
+
+            &:hover {
+                color: #9029b8;
+                cursor: pointer;
+            }
         }
 
         & div {
@@ -86,6 +93,7 @@ main.faq {
         & p {
             max-height: 0;
             overflow: hidden;
+            color: hsl(292, 16%, 49%);
             line-height: 1.5;
             transition: 0.3s ease-in-out;
         }
