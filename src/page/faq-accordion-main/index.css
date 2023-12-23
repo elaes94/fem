@@ -84,13 +84,16 @@ main.faq {
         }
 
         & p {
-            display: none;
+            max-height: 0;
+            overflow: hidden;
             line-height: 1.5;
-            padding-bottom: min(5vw, 1.52rem);
+            transition: 0.3s ease-in-out;
         }
 
         & p.show {
             display: block;
+            max-height: 10rem;
+            padding-bottom: min(5vw, 1.52rem);
         }
     }
 }
