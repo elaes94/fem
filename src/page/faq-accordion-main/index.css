@@ -74,7 +74,7 @@ main.faq {
     & article {
 
         & h3 {
-            font-size: clamp(1rem, 2.7vw, 1.125rem);
+            font-size: clamp(1rem, 2.7vw, 1.129rem);
             padding: min(6vw, 1.82rem) 0 min(6vw, 1.72rem) 0;
             font-weight: 600;
 
