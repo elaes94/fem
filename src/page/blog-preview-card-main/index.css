@@ -1,10 +1,93 @@
-h1 {
-    background-color: chartreuse;
+@font-face {
+    font-family: "Figtree";
+    font-weight: 600;
+    src:
+        url("/blog-preview-card-main/assets/fonts/static/Figtree-SemiBold.ttf") format("truetype"),
+}
+
+@font-face {
+    font-family: "Figtree";
+    font-weight: 800;
+    src:
+        url("/blog-preview-card-main/assets/fonts/static/Figtree-ExtraBold.ttf") format("truetype"),
 }
 
 main.blogCard {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f5d04e;
+    font-family: 'Figtree', 'sans-serif';
+
+    & section {
+        width: min(87vw, 24rem);
+        margin: auto;
+        padding: 1.4rem;
+        border: solid 1px black;
+        border-radius: 1rem;
+        background-color: white;
+        box-shadow: 0.5rem 0.5rem black;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            box-shadow: 1rem 1rem black;
+            cursor: pointer;
+        }
+    }
+
+    & .image {
+        display: flex;
+        align-items: center;
+        border-radius: 0.5rem;
+        overflow: hidden;
+
+        &>img {
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    & .type {
+        display: inline-block;
+        margin-top: 1.25rem;
+        padding: 0.35rem 0.75rem;
+        border-radius: 0.3rem;
+        background-color: #f5d04e;
+        font-size: 0.9rem;
+        font-weight: 800;
+    }
+
+    & .date {
+        margin-top: 0.87rem;
+        font-size: clamp(0.82rem, 2vw, 0.872rem);
+        font-weight: 400;
+    }
 
     & h1 {
-        background-color: chartreuse;
+        margin-top: 1.16rem;
+        font-size: clamp(1.26rem, 2.5vw, 1.51rem);
+
+        &:hover {
+            color: #f5d04e;
+        }
+    }
+
+    & p {
+        margin-top: 1.05rem;
+        font-size: clamp(0.87rem, 2.2vw, 1rem);
+        color: hsl(0, 0%, 50%);
+        line-height: 1.5;
+    }
+
+    & .author {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-top: 1.5rem;
+        font-weight: 800;
+        font-size: 0.87rem;
+
+        &>img {
+            width: 2rem;
+        }
     }
 }

@@ -11,15 +11,29 @@ export default function Index() {
     }, [])
     return (
         <main className="blogCard">
-            Learning
-
-            Published 21 Dec 2023
-
-            HTML & CSS foundations
-
-            These languages are the backbone of every website, defining structure, content, and presentation.
-
-            Greg Hooper
+            <section>
+                <div className="image">
+                <img src="/blog-preview-card-main/assets/images/illustration-article.svg" alt="" />
+                </div>
+                <div className="type">
+                    Learning
+                </div>
+                <div className="date">
+                    Published 21 Dec 2023
+                </div>
+                <h1>
+                    HTML & CSS foundations
+                </h1>
+                <p>
+                    These languages are the backbone of every website, defining structure, content, and presentation.
+                </p>
+                <div className="author">
+                    <img src="/blog-preview-card-main/assets/images/image-avatar.webp" alt="" />
+                    <div>
+                        Greg Hooper
+                    </div>
+                </div>
+            </section>
         </main>
     )
 }
