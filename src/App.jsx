@@ -16,6 +16,7 @@ function App() {
         <MyCard route="/rating" />
         <MyCard route="/newsletter" />
         <MyCard route="/faq" />
+        <MyCard route="/blog-card" />
       </section>
     </>
   )

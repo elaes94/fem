@@ -1,0 +1,10 @@
+h1 {
+    background-color: chartreuse;
+}
+
+main.blogCard {
+
+    & h1 {
+        background-color: chartreuse;
+    }
+}

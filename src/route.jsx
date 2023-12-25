@@ -5,6 +5,7 @@ import Result from './page/results-summary-component-main'
 import Rating from './page/interactive-rating-component-main/Index.jsx'
 import Newsletter from './page/newsletter-sign-up-with-success-message-main/Index.jsx'
 import Faq from './page/faq-accordion-main/Index.jsx'
+import BlogCard from './page/blog-preview-card-main/Index.jsx'
 
 const router = createBrowserRouter([
     {
@@ -23,6 +24,9 @@ const router = createBrowserRouter([
     }, {
         path: "/faq",
         element: <Faq />
+    }, {
+        path: "/blog-card",
+        element: <BlogCard />
     },
 ])
 
