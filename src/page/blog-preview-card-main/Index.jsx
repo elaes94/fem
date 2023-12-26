@@ -3,7 +3,7 @@ import './index.css'
 
 export default function Index() {
     useEffect(() => {
-        document.title = 'Frontend Mentor | FAQ accordion'
+        document.title = 'Frontend Mentor | Blog preview card'
         const favicon = document.getElementById('favicon')
         favicon.href = '/blog-preview-card-main/assets/images/favicon-32x32.png'
         favicon.type = 'image/png'

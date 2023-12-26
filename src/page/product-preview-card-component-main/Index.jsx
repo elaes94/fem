@@ -1,0 +1,27 @@
+import { useEffect } from "react"
+import './index.css'
+
+export default function Index() {
+    useEffect(() => {
+        document.title = 'Frontend Mentor | Product preview card component'
+        const favicon = document.getElementById('favicon')
+        favicon.href = '/product-preview-card-component-main/images/favicon-32x32.png'
+        favicon.type = 'image/png'
+        favicon.sizes = '32x32'
+    }, [])
+    return (
+        <main className="productPreview">
+            Perfume
+
+            Gabrielle Essence Eau De Parfum
+
+            A floral, solar and voluptuous interpretation composed by Olivier Polge,
+            Perfumer-Creator for the House of CHANEL.
+
+            $149.99
+            $169.99
+
+            Add to Cart
+        </main>
+    )
+}

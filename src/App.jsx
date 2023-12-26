@@ -17,6 +17,7 @@ function App() {
         <MyCard route="/newsletter" />
         <MyCard route="/faq" />
         <MyCard route="/blog-card" />
+        <MyCard route="/product-preview" />
       </section>
     </>
   )
