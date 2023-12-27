@@ -12,7 +12,8 @@ export default function Index() {
     return (
         <main className="productPreview">
             <section>
-                <img src="/product-preview-card-component-main/images/image-product-desktop.jpg" alt="" />
+                <img className="desktop" src="/product-preview-card-component-main/images/image-product-desktop.jpg" alt="" />
+                <img className="mobile" src="/product-preview-card-component-main/images/image-product-mobile.jpg" alt="" />
                 <div className="description">
                     <div className="type">
                         Perfume
