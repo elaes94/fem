@@ -1,5 +1,91 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
 
 main.productPreview {
-    background-color: chartreuse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+    font-family: 'Montserrat', 'sans-serif';
+
+    & > section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 0.6rem;
+        max-width: 37.5rem;
+        max-height: 30rem;
+        background-color: white;
+        contain: paint;
+    }
+
+    & img {
+        width: calc(37.5rem/2);
+        object-fit: contain;
+    }
+
+    & .description {
+        padding: 2rem;
+    }
+
+    & .type {
+        font-size: 0.7rem;
+        letter-spacing: 0.35rem;
+        text-transform: uppercase;
+        color: hsl(228, 12%, 48%);
+    }
+
+    & h1 {
+        margin-top: 1.4rem;
+        font-family: 'Fraunces', 'serif';
+        font-size: 2em;
+        line-height: 1;
+    }
+
+    & p {
+        margin-top: 1.5rem;
+        font-size: 14px;
+        line-height: 1.63;
+        color: hsl(228, 12%, 48%);
+    }
+
+    & .price {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        margin-top: 1.59rem;
+    }
+
+    & .new {
+        font-family: 'Fraunces', 'serif';
+        font-size: 2rem;
+        color: hsl(158, 36%, 37%);
+    }
+
+    & .old {
+        font-size: 0.80rem;
+        text-decoration: line-through;
+        color: hsl(228, 12%, 48%);
+    }
+
+    & button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.65rem;
+        margin-top: 1.56rem;
+        border: none;
+        padding: 0.96rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        background-color: hsl(158, 36%, 37%);
+        color: white;
+        font-size: 0.95rem;
+        font-weight: 700;
+        /* line-height: 0.2; */
+
+        & > img {
+            height: 1rem;
+            width: 1rem;
+        }
+    }
 }
