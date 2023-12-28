@@ -7,6 +7,7 @@ import Newsletter from './page/newsletter-sign-up-with-success-message-main/Inde
 import Faq from './page/faq-accordion-main/Index.jsx'
 import BlogCard from './page/blog-preview-card-main/Index.jsx'
 import ProductPreview from './page/product-preview-card-component-main/Index.jsx'
+import InteractiveCard from './page/interactive-card-details-form-main/Index.jsx'
 
 const router = createBrowserRouter([
     {
@@ -31,6 +32,9 @@ const router = createBrowserRouter([
     },{
         path: "/product-preview",
         element: <ProductPreview />
+    },,{
+        path: "/interactive-card",
+        element: <InteractiveCard />
     },
 ])
 

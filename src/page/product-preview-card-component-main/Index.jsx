@@ -9,6 +9,7 @@ export default function Index() {
         favicon.type = 'image/png'
         favicon.sizes = '32x32'
     }, [])
+    
     return (
         <main className="productPreview">
             <section>

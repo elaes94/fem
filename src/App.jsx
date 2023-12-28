@@ -18,6 +18,7 @@ function App() {
         <MyCard route="/faq" />
         <MyCard route="/blog-card" />
         <MyCard route="/product-preview" />
+        <MyCard route="/interactive-card" />
       </section>
     </>
   )
