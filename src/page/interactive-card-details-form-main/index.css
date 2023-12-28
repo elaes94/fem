@@ -1,4 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
 
 main.interactiveCard {
-    background: lightblue;
+    height: 100vh;
+    background-image: url('/interactive-card-details-form-main/images/bg-main-desktop.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: 'Space Grotesk', sans-serif;
+
+    & .recto{
+        position: relative;
+        width: 28rem;
+        height: 15.3rem;
+        background-image: url('/interactive-card-details-form-main/images/bg-card-front.png');
+        background-size: cover;
+        color: white;
+        z-index: 2;
+        transform: translate(11.3vw, 1rem);
+
+        @media (max-width: 660px) {
+            transform: scale(63.5%);
+        }
+
+
+        & img {
+            position: absolute;
+            top: 1.75rem;
+            left: 2rem
+        }
+
+        & .number {
+            position: absolute;
+            top: 8.718rem;
+            left: 2rem;
+            font-size: 1.77rem;
+            letter-spacing: 0.2rem;
+        }
+
+        & .divers {
+            position: absolute;
+            width: 100%;
+            top: 12.5rem;
+            left: 2rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            font-weight: 300;
+            letter-spacing: 0.085rem;
+        }
+
+        & .date {
+            position: absolute;
+            left: 20.75rem;
+        }
+    }
+
+    & .verso{
+        position: relative;
+        width: 28rem;
+        height: 15.3rem;
+        background-image: url('/interactive-card-details-form-main/images/bg-card-back.png');
+        background-size: cover;
+        color: white;
+        z-index: 1;
+        transform: translate(17.8vw, 2rem);
+
+        @media (max-width: 660px) {
+            transform: scale(63.5%);
+        }
+
+        & .code {
+            position: absolute;
+            top: 6.95rem;
+            left: 22.26rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.12rem;
+        }
+    }
+
+    & form {
+        position: absolute;
+        left: 57.8vw;
+        width: 23.8rem;
+        height: 40rem;
+        border: 1px solid black;
+
+        & button {
+            width: 100%;
+            border: none;
+            color: white;
+            background-color: hsl(278, 68%, 11%);
+        }
+    }
 }

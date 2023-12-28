@@ -1,7 +1,8 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import './index.css'
 
 export default function Index() {
+    const [submit,isSubmit] = useState(false)
     useEffect(() => {
         document.title = 'Frontend Mentor | Product preview card component'
         const favicon = document.getElementById('favicon')
@@ -12,11 +13,25 @@ export default function Index() {
 
     return (
         <main className="interactiveCard">
-            0000 0000 0000 0000
-            Jane Appleseed
-            00/00
-
-            000
+            <form action="">
+                <div>
+                    <label htmlFor="">Cardholder Name</label>
+                    <input type="text" placeholder="e.g. Jane Appleseed"/>
+                    <span></span>
+                </div>
+                <button>Confirm</button>
+            </form>
+            <div className="recto">
+                <img src="/interactive-card-details-form-main/images/card-logo.svg" alt="" />
+                <div className="number">0000 0000 0000 0000</div>
+                <div className="divers">
+                    <span className="name">Jane Appleseed</span>
+                    <span className="date">00/00</span>
+                </div>
+            </div>
+            <div className="verso">
+                <span className="code">000</span>
+            </div>
 
             Cardholder Name
             e.g. Jane Appleseed
@@ -31,7 +46,7 @@ export default function Index() {
             CVC
             e.g. 123
 
-            Confirm
+            
 
             {/* <!-- Completed state start --> */}
 
