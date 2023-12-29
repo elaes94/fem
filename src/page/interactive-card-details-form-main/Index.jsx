@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import './index.css'
 
 export default function Index() {
-    const [submit,isSubmit] = useState(false)
+    const [submit, isSubmit] = useState(false)
     useEffect(() => {
         document.title = 'Frontend Mentor | Product preview card component'
         const favicon = document.getElementById('favicon')
@@ -14,10 +14,30 @@ export default function Index() {
     return (
         <main className="interactiveCard">
             <form action="">
-                <div>
+                <div className="one-field">
                     <label htmlFor="">Cardholder Name</label>
-                    <input type="text" placeholder="e.g. Jane Appleseed"/>
-                    <span></span>
+                    <input type="text" placeholder="e.g. Jane Appleseed" />
+                    <span>error</span>
+                </div>
+                <div className="one-field">
+                    <label htmlFor="">Card Number</label>
+                    <input type="text" placeholder="e.g. 1234 5678 9123 0000" />
+                    <span>error</span>
+                </div>
+                <div className="date-cvc">
+                    <div className="one-field">
+                        <label htmlFor="">Date</label>
+                        <div>
+                            <input className="half" type="text" placeholder="MM" />
+                            <input className="half" type="text" placeholder="YY" />
+                        </div>
+                        <span>error</span>
+                    </div>
+                    <div className="one-field">
+                        <label htmlFor="">CVC</label>
+                        <input type="text" placeholder="e.g. 123" />
+                        <span>error</span>
+                    </div>
                 </div>
                 <button>Confirm</button>
             </form>
@@ -33,11 +53,9 @@ export default function Index() {
                 <span className="code">000</span>
             </div>
 
-            Cardholder Name
-            e.g. Jane Appleseed
 
-            Card Number
-            e.g. 1234 5678 9123 0000
+
+
 
             Exp. Date (MM/YY)
             MM
@@ -46,7 +64,7 @@ export default function Index() {
             CVC
             e.g. 123
 
-            
+
 
             {/* <!-- Completed state start --> */}
 
