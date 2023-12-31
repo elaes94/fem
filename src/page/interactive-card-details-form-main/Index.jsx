@@ -1,8 +1,24 @@
-import { useEffect, useState } from "react"
 import './index.css'
+import { useEffect, useReducer, useState } from "react"
+import Form from "./Form"
+import Confirmation from "./Confirmation"
+import cardReducer from './cardReducer'
 
 export default function Index() {
-    const [submit, isSubmit] = useState(false)
+    const [submit, setSubmit] = useState(false)
+    const [card, dispatch] = useReducer(cardReducer, {
+        name: '',
+        number: '',
+        month: '',
+        year: '',
+        cvc: '',
+        error: {
+            number: '',
+            date: '',
+            cvc: ''
+        }
+    })
+
     useEffect(() => {
         document.title = 'Frontend Mentor | Product preview card component'
         const favicon = document.getElementById('favicon')
@@ -11,66 +27,69 @@ export default function Index() {
         favicon.sizes = '32x32'
     }, [])
 
+    function handleName(e) {
+        dispatch({
+            type: 'handleName',
+            name: e.target.value
+        })
+    }
+
+    function handleNumber(e) {
+        dispatch({
+            type: 'handleNumber',
+            number: e.target.value
+        })
+    }
+
+    function handleMonth(e) {
+        dispatch({
+            type: 'handleMonth',
+            month: e.target.value
+        })
+    }
+
+    function handleYear(e) {
+        dispatch({
+            type: 'handleYear',
+            year: e.target.value
+        })
+    }
+
+    function handleCvc(e) {
+        dispatch({
+            type: 'handleCvc',
+            cvc: e.target.value
+        })
+    }
+
     return (
         <main className="interactiveCard">
-            <form action="">
-                <div className="one-field">
-                    <label htmlFor="">Cardholder Name</label>
-                    <input type="text" placeholder="e.g. Jane Appleseed" />
-                    <span>error</span>
-                </div>
-                <div className="one-field">
-                    <label htmlFor="">Card Number</label>
-                    <input type="text" placeholder="e.g. 1234 5678 9123 0000" />
-                    <span>error</span>
-                </div>
-                <div className="date-cvc">
-                    <div className="one-field">
-                        <label htmlFor="">Date</label>
-                        <div>
-                            <input className="half" type="text" placeholder="MM" />
-                            <input className="half" type="text" placeholder="YY" />
-                        </div>
-                        <span>error</span>
-                    </div>
-                    <div className="one-field">
-                        <label htmlFor="">CVC</label>
-                        <input type="text" placeholder="e.g. 123" />
-                        <span>error</span>
-                    </div>
-                </div>
-                <button>Confirm</button>
-            </form>
+            {submit ? <Confirmation /> :
+                <Form
+                    card={card}
+                    onNameChange={handleName}
+                    onNumberChange={handleNumber}
+                    onMonthChange={handleMonth}
+                    onYearChange={handleYear}
+                    onCvcChange={handleCvc}
+                />}
+
+
             <div className="recto">
                 <img src="/interactive-card-details-form-main/images/card-logo.svg" alt="" />
-                <div className="number">0000 0000 0000 0000</div>
+                <div className="number">{card.number || '0000 0000 0000 0000'}</div>
                 <div className="divers">
-                    <span className="name">Jane Appleseed</span>
-                    <span className="date">00/00</span>
+                    <span className="name">{card.name || 'Jane Appleseed'}</span>
+                    <span className="date">{card.month || '00'}/{card.year || '00'}</span>
                 </div>
             </div>
             <div className="verso">
-                <span className="code">000</span>
+                <span className="code">{card.cvc || '000'}</span>
             </div>
-
-
-
-
-
-            Exp. Date (MM/YY)
-            MM
-            YY
-
-            CVC
-            e.g. 123
-
-
 
             {/* <!-- Completed state start --> */}
 
-            Thank you!
-            We've added your card details
-            Continue
+
         </main>
     )
 }
