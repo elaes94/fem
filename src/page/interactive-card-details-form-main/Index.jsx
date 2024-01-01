@@ -5,7 +5,7 @@ import Confirmation from "./Confirmation"
 import cardReducer from './cardReducer'
 
 export default function Index() {
-    const [submit, setSubmit] = useState(false)
+    const [validate, setValidate] = useState(null)
     const [card, dispatch] = useReducer(cardReducer, {
         name: '',
         number: '',
@@ -13,9 +13,9 @@ export default function Index() {
         year: '',
         cvc: '',
         error: {
-            number: '',
-            date: '',
-            cvc: ''
+            number: "Can't be blank",
+            date: "Can't be blank",
+            cvc: "Can't be blank"
         }
     })
 
@@ -64,17 +64,24 @@ export default function Index() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        console.log("click button")
-        dispatch({
-            type: 'handleSubmit',
-        })
+        // dispatch({
+        //     type: 'handleSubmit',
+        // })
+        console.log("error before : " + card.error.number)
+        if(card.error.number == ''){
+            console.log("error after : " + card.error.number)
+            setValidate( validate == 'error' || validate == 'empty' ? 'valid' : 'empty')
+        } else {
+            setValidate('error')
+        }
     }
 
     return (
         <main className="interactiveCard">
-            {submit ? <Confirmation /> :
+            {validate == "valid" ? <Confirmation validate={validate}/> :
                 <Form
                     card={card}
+                    validate={validate}
                     onNameChange={handleName}
                     onNumberChange={handleNumber}
                     onMonthChange={handleMonth}

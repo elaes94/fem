@@ -7,26 +7,27 @@ export default function cardReducer(card, action) {
         }
         case 'handleNumber': {
             let code = action.number.replace(/\s/g, '').substring(0, 16);
+            const numberError = checkValue(code, 16)
             let str = code.toString().replace(/\d{4}(?=.)/g, '$& ')
-            return { ...card, number: str }
+            return { ...card, number: str, error : { ...card.error, number : numberError}}
         }
         case 'handleMonth': {
-            return { ...card, month: action.month.substring(0, 2) }
+            const month = checkValue(action.month, 2, 1, 12)
+            const year = checkValue(card.year, 2, 0, 99)
+            let dateError = month != '' ? month : year
+            dateError = dateError != '' ? dateError : checkDate(action.month, card.year)
+            return { ...card, month: action.month.substring(0, 2), error : { ...card.error, date : dateError }}
         }
         case 'handleYear': {
-            return { ...card, year: action.year.substring(0, 2) }
+            const month = checkValue(card.month, 2, 1, 12)
+            const year = checkValue(action.year, 2, 0, 99)
+            let dateError = month != '' ? month : year
+            dateError = dateError != '' ? dateError : checkDate(card.month, action.year)
+            return { ...card, year: action.year.substring(0, 2), error : { ...card.error, date : dateError } }
         }
         case 'handleCvc': {
-            return { ...card, cvc: action.cvc.substring(0, 3) }
-        }
-        case 'handleSubmit': {
-            const number = checkValue(card.number.replace(/\s/g, ''), 16)
-            const month = checkValue(card.month, 2, 1, 12)
-            const year = checkValue(card.year, 2, 0, 99)
-            let date = month != '' ? month : year
-            date = date != '' ? date : checkDate(card.month, card.year)
-            const cvc = checkValue(card.cvc, 3)
-            return { ...card, error : { ...card.error, number, date, cvc}}
+            const cvcError = checkValue(action.cvc, 3)
+            return { ...card, cvc: action.cvc.substring(0, 3), error : { ...card.error, cvc : cvcError }  }
         }
     }
 }
