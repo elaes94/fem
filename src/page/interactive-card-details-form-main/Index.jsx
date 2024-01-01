@@ -5,7 +5,7 @@ import Confirmation from "./Confirmation"
 import cardReducer from './cardReducer'
 
 export default function Index() {
-    const [validate, setValidate] = useState(null)
+    const [validate, setValidate] = useState('empty')
     const [card, dispatch] = useReducer(cardReducer, {
         name: '',
         number: '',
@@ -14,6 +14,8 @@ export default function Index() {
         cvc: '',
         error: {
             number: "Can't be blank",
+            month: "Can't be blank",
+            year: "Can't be blank",
             date: "Can't be blank",
             cvc: "Can't be blank"
         }
@@ -64,13 +66,8 @@ export default function Index() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        // dispatch({
-        //     type: 'handleSubmit',
-        // })
-        console.log("error before : " + card.error.number)
-        if(card.error.number == ''){
-            console.log("error after : " + card.error.number)
-            setValidate( validate == 'error' || validate == 'empty' ? 'valid' : 'empty')
+        if (card.error.number == '' && card.error.date == '' && card.error.cvc == '') {
+            setValidate(validate == 'error' || validate == 'empty' ? 'valid' : 'empty')
         } else {
             setValidate('error')
         }
@@ -78,7 +75,7 @@ export default function Index() {
 
     return (
         <main className="interactiveCard">
-            {validate == "valid" ? <Confirmation validate={validate}/> :
+            {validate == "valid" ? <Confirmation validate={validate} /> :
                 <Form
                     card={card}
                     validate={validate}
@@ -89,7 +86,6 @@ export default function Index() {
                     onCvcChange={handleCvc}
                     onSubmit={handleSubmit}
                 />}
-
 
             <div className="recto">
                 <img src="/interactive-card-details-form-main/images/card-logo.svg" alt="" />
@@ -102,10 +98,6 @@ export default function Index() {
             <div className="verso">
                 <span className="code">{card.cvc || '000'}</span>
             </div>
-
-            {/* <!-- Completed state start --> */}
-
-
         </main>
     )
 }
