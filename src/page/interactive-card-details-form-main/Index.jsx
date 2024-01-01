@@ -62,6 +62,14 @@ export default function Index() {
         })
     }
 
+    function handleSubmit(e) {
+        e.preventDefault()
+        console.log("click button")
+        dispatch({
+            type: 'handleSubmit',
+        })
+    }
+
     return (
         <main className="interactiveCard">
             {submit ? <Confirmation /> :
@@ -72,6 +80,7 @@ export default function Index() {
                     onMonthChange={handleMonth}
                     onYearChange={handleYear}
                     onCvcChange={handleCvc}
+                    onSubmit={handleSubmit}
                 />}
 
 

@@ -118,6 +118,11 @@ main.interactiveCard {
             & span {
                 font-size: 0.755rem;
                 color: hsl(0, 100%, 66%);
+                visibility: visible;
+
+                &.hide {
+                    visibility: hidden;
+                }
             }
         }
 
