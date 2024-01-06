@@ -22,7 +22,7 @@ export default function Index() {
     })
 
     useEffect(() => {
-        document.title = 'Frontend Mentor | Product preview card component'
+        document.title = 'Frontend Mentor | Interactive card details form'
         const favicon = document.getElementById('favicon')
         favicon.href = '/interactive-card-details-form-main/images/favicon-32x32.png'
         favicon.type = 'image/png'
