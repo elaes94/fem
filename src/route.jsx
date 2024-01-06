@@ -8,6 +8,7 @@ import Faq from './page/faq-accordion-main/Index.jsx'
 import BlogCard from './page/blog-preview-card-main/Index.jsx'
 import ProductPreview from './page/product-preview-card-component-main/Index.jsx'
 import InteractiveCard from './page/interactive-card-details-form-main/Index.jsx'
+import IntroSection from './page/intro-section-with-dropdown-navigation-main/Index.jsx'
 
 const router = createBrowserRouter([
     {
@@ -32,9 +33,12 @@ const router = createBrowserRouter([
     },{
         path: "/product-preview",
         element: <ProductPreview />
-    },,{
+    },{
         path: "/interactive-card",
         element: <InteractiveCard />
+    },{
+        path: "/intro-section",
+        element: <IntroSection />
     },
 ])
 
