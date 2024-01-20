@@ -5,7 +5,8 @@ function App() {
 
   const mystyle = {
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    flexWrap: 'wrap'
   }
 
   return (
