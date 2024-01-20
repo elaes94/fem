@@ -2,6 +2,7 @@
 
 main.introSection {
     font-family: 'Epilogue', sans-serif;
+    background-color: hsl(0, 0%, 98%);
 
     & header {
         display: flex;
