@@ -2,7 +2,6 @@
 
 main.introSection {
     font-family: 'Epilogue', sans-serif;
-    background-color: hsl(0, 0%, 98%);
 
     & header {
         display: flex;
@@ -287,6 +286,15 @@ main.introSection {
             padding-inline: 1rem;
             max-width: 100%;
         }
+    }
+
+    & .background {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        z-index: -1;        
+        background-color: hsl(0, 0%, 98%);
     }
 
     & .hide {

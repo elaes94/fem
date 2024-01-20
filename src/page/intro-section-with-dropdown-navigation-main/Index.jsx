@@ -112,6 +112,7 @@ export default function Index() {
                 </div>
                 <img className='desktop' src="/intro-section-with-dropdown-navigation-main/images/image-hero-desktop.png" alt="" />
             </section>
+            <div className='background'></div>
         </main>
     )
 }
