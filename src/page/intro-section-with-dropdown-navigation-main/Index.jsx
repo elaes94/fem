@@ -16,11 +16,16 @@ export default function Index() {
         favicon.href = '/intro-section-with-dropdown-navigation-main/images/favicon-32x32.png'
         favicon.type = 'image/png'
         favicon.sizes = '32x32'
-        setMenu({ ...menu, isDesktop: window.innerWidth > 800 })
+        const desktop = window.innerWidth > 800
+        setMenu({ ...menu, isDesktop: desktop, mobileMenu: desktop })
     }, [])
     useEffect(() => {
         window.addEventListener('resize', () => {
-            setMenu({ ...menu, isDesktop: window.innerWidth > 800 })
+            if (window.innerWidth > 800) {
+                setMenu({ ...menu, isDesktop: true, mobileMenu: true })
+            } else {
+                setMenu({ ...menu, isDesktop: false, mobileMenu: false })
+            }
         })
     }, [])
 
@@ -34,7 +39,8 @@ export default function Index() {
                             <div className='features'>
                                 <a href='#' onClick={() => { setMenu({ ...menu, features: !menu.features }) }}>
                                     <span>Features</span>
-                                    <img src="/intro-section-with-dropdown-navigation-main/images/icon-arrow-down.svg" alt="" />
+                                    <img className={menu.features ? '' : 'hide'} src="/intro-section-with-dropdown-navigation-main/images/icon-arrow-down.svg" alt="" />
+                                    <img className={menu.features ? 'hide' : ''} src="/intro-section-with-dropdown-navigation-main/images/icon-arrow-up.svg" alt="" />
                                 </a>
                             </div>
                             <div className={menu.features ? 'submenu' : 'submenu hide'}>
@@ -60,7 +66,8 @@ export default function Index() {
                             <div className='company'>
                                 <a href='#' onClick={() => { setMenu({ ...menu, company: !menu.company }) }}>
                                     <span>Company</span>
-                                    <img src="/intro-section-with-dropdown-navigation-main/images/icon-arrow-down.svg" alt="" />
+                                    <img className={menu.company ? '' : 'hide'} src="/intro-section-with-dropdown-navigation-main/images/icon-arrow-down.svg" alt="" />
+                                    <img className={menu.company ? 'hide' : ''} src="/intro-section-with-dropdown-navigation-main/images/icon-arrow-up.svg" alt="" />
                                 </a>
                             </div>
                             <div className={menu.company ? 'submenu' : 'submenu hide'}>

@@ -69,7 +69,7 @@ main.introSection {
         right: 1.5rem;
         z-index: 200;
 
-        &:hover{
+        &:hover {
             cursor: pointer;
         }
     }
@@ -98,6 +98,10 @@ main.introSection {
         margin-top: 2.1rem;
         margin-bottom: 0.8rem;
         margin-left: 1.8rem;
+
+        &>*{
+            cursor: pointer;
+        }
 
 
         @media (min-width: 800px) {
