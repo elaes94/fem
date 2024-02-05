@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react"
 import './index.css'
+import Signup from "./Signup"
+import Success from "./Success"
 
 function Index() {
-
+    const [sign, setSign] = useState(false)
     useEffect(() => {
         document.title = 'Frontend Mentor | Newsletter sign-up form with success message'
         const favicon = document.getElementById('favicon')
@@ -13,43 +15,45 @@ function Index() {
 
     return (
         <>
-            <section className="Newsletter">
+            <main className="newsletter">
                 {/* <!-- Sign-up form start --> */}
-                <div className="image">
-                    <img src="/newsletter-sign-up-with-success-message-main/images/illustration-sign-up-mobile.svg" alt="" />
+                <div className="wrapper">
+                    <div className="image">
+                        <img src="/newsletter-sign-up-with-success-message-main/images/illustration-sign-up-desktop.svg" alt="" />
+                    </div>
+                    <div className="content">
+                        Stay updated!
+
+                        Join 60,000+ product managers receiving monthly updates on:
+
+                        Product discovery and building what matters
+                        Measuring to ensure updates are a success
+                        And much more!
+
+                        Email address
+                        email@company.com
+
+                        Subscribe to monthly newsletter
+
+                        {/* <!-- Sign-up form end --> */}
+
+                        {/* <!-- Success message start --> */}
+
+                        Thanks for subscribing!
+
+                        A confirmation email has been sent to ash@loremcompany.com.
+                        Please open it and click the button inside to confirm your subscription.
+
+                        Dismiss message
+
+                        {/* <!-- Success message end --> */}
+                    </div>
                 </div>
-                <div className="content">
-                    Stay updated!
-
-                    Join 60,000+ product managers receiving monthly updates on:
-
-                    Product discovery and building what matters
-                    Measuring to ensure updates are a success
-                    And much more!
-
-                    Email address
-                    email@company.com
-
-                    Subscribe to monthly newsletter
-
-                    {/* <!-- Sign-up form end --> */}
-
-                    {/* <!-- Success message start --> */}
-
-                    Thanks for subscribing!
-
-                    A confirmation email has been sent to ash@loremcompany.com.
-                    Please open it and click the button inside to confirm your subscription.
-
-                    Dismiss message
-
-                    {/* <!-- Success message end --> */}
-                </div>
-            </section>
-            <div className="attribution">
+            </main>
+            {/* <div className="attribution">
                 Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
                 Coded by <a href="#">Your Name Here</a>.
-            </div>
+            </div> */}
         </>
     )
 }

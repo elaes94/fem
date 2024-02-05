@@ -1,7 +1,20 @@
-/* section {
-    padding: 0;
-} */
 
-/* .Newsletter {
+main.newsletter {
+    & img {
+        display: block;
+        max-width: 100%;
+    }
 
-} */
+    & .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 40rem;
+        margin-inline: auto;
+    }
+
+    & .image {
+        order: 1;
+        width: 20rem;
+        background-color: chartreuse;
+    }
+}
