@@ -19,34 +19,36 @@ function Index() {
                 {/* <!-- Sign-up form start --> */}
                 <div className="wrapper">
                     <div className="image">
-                        <img src="/newsletter-sign-up-with-success-message-main/images/illustration-sign-up-desktop.svg" alt="" />
+                        <img className="desk" src="/newsletter-sign-up-with-success-message-main/images/illustration-sign-up-desktop.svg" alt="" />
+                        <img className="mobile" src="/newsletter-sign-up-with-success-message-main/images/illustration-sign-up-mobile.svg" alt="" />
                     </div>
                     <div className="content">
-                        Stay updated!
+                        <h1>Stay updated!</h1>
 
-                        Join 60,000+ product managers receiving monthly updates on:
-
-                        Product discovery and building what matters
-                        Measuring to ensure updates are a success
-                        And much more!
-
-                        Email address
-                        email@company.com
-
-                        Subscribe to monthly newsletter
-
+                        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+                        <ul>
+                            <li>
+                                <img src="/newsletter-sign-up-with-success-message-main/images/icon-list.svg" alt="" />
+                                <span>Product discovery and building what matters</span>
+                            </li>
+                            <li>
+                                <img src="/newsletter-sign-up-with-success-message-main/images/icon-list.svg" alt="" />
+                                <span>Measuring to ensure updates are a success</span>
+                            </li>
+                            <li>
+                                <img src="/newsletter-sign-up-with-success-message-main/images/icon-list.svg" alt="" />
+                                <span>And much more!</span>
+                            </li>
+                        </ul>
+                        <form action="">
+                            <div className="label mark">
+                                <label htmlFor="">Email address</label>
+                                <span className="error">Valid email required</span>
+                            </div>
+                            <input type="text" placeholder="email@company.com" />
+                            <button className="mark">Subscribe to monthly newsletter</button>
+                        </form>
                         {/* <!-- Sign-up form end --> */}
-
-                        {/* <!-- Success message start --> */}
-
-                        Thanks for subscribing!
-
-                        A confirmation email has been sent to ash@loremcompany.com.
-                        Please open it and click the button inside to confirm your subscription.
-
-                        Dismiss message
-
-                        {/* <!-- Success message end --> */}
                     </div>
                 </div>
             </main>
