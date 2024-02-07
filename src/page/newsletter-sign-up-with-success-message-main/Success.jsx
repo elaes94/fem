@@ -1,13 +1,15 @@
-export default function Success() {
+export default function Success({ onSubmit }) {
 
-    return (<> {/* <!-- Success message start --> */}
+    return (
+        <div className="wrapper">
+            Thanks for subscribing!
 
-        Thanks for subscribing!
+            A confirmation email has been sent to ash@loremcompany.com.
+            Please open it and click the button inside to confirm your subscription.
+            <form onSubmit={onSubmit}>
+                <button>Dismiss message</button>
+            </form>
 
-        A confirmation email has been sent to ash@loremcompany.com.
-        Please open it and click the button inside to confirm your subscription.
-
-        Dismiss message
-
-        {/* <!-- Success message end --> */} </>)
+        </div>
+    )
 }
